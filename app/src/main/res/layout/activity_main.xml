@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginVertical="45dp"
+            android:text="@string/app_title"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:textAllCaps="true"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/categories" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp" />
+
+        <TextView
+            android:textAllCaps="true"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/tasks" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/accent"
+        android:src="@drawable/ic_add"
+        app:fabSize="normal"
+        android:tint="@color/black"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="32dp"/>
+
+</FrameLayout>
+
